@@ -1,0 +1,10 @@
+@import "../../../assets/styles/mixin.scss";
+
+.ElectorList {
+    width: 100%;
+    padding: 3rem 1.4rem 1.5rem 1.4rem;
+
+    @include respond(laptop) {
+        padding: 1rem 2rem;
+    }
+}

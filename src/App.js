@@ -1,15 +1,16 @@
 import classes from "./App.module.scss";
 
-
-import EVM from "./containers/EvmDemo";
+import EvmDemo from "./containers/EvmDemo";
 import Layout from "./hoc/layout/Layout";
+import ActionButtons from "./components/ActionButtons/ActionButtons"
 
 function App() {
   return (
     <div className={classes.App}>
       <Layout>
-        <EVM />
+        <EvmDemo />
       </Layout>
+      <ActionButtons />
     </div>
   );
 }

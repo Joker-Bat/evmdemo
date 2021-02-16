@@ -1,0 +1,84 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixin.scss";
+
+.Elector {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $background;
+  }
+
+  &:not(:first-child) .Logo {
+    transform: scale(0.8);
+  }
+
+  .Party {
+    display: flex;
+    flex-basis: 60%;
+    justify-content: flex-start;
+    align-items: center;
+    background: #d5e0e7;
+    padding: 1rem 1.1rem;
+
+    @include respond(tab) {
+      flex-basis: 55%;
+    }
+  }
+
+  .PartyDetails {
+      width: 55%;
+      text-align: center;
+      margin-right: 1.5rem;
+  }
+
+  .PartyName {
+    line-height: 1.4;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: .7rem;
+  }
+
+  .PartyLeaderNameThamizh {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+  }
+
+  .PartyLeaderNameEnglish {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+  .VoteButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 25%;
+
+    & div:not(:last-child) {
+        margin-right: .8rem;
+    }
+
+    @include respond(tab) {
+      flex-basis: 40%;
+      justify-content: center;
+    }
+  }
+
+  .Logo {
+    height: 60px;
+    width: 60px;
+    transform: scale(1.2);
+
+    @include respond(tab) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

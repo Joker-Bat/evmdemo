@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixin.scss";
+
+.ActionButtons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  background: transparent;
+
+  & button {
+    appearance: none;
+    width: 40%;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    transition: color 0.1s ease-in-out, background-color 0.2s ease-in-out,
+      border 0.1s ease-in-out;
+
+    @include respond(laptop) {
+      width: 30%;
+      padding: 0;
+    }
+  }
+}
+
+.ResetButton {
+  border: 1px solid $resetButton;
+  background: transparent;
+  color: $darkgray;
+
+  &:hover {
+    border: 1px solid $black;
+    background: $resetButton;
+    color: $white;
+  }
+}
+
+.ResultButton {
+  border: 1px solid transparent;
+  background: $resultButton;
+  color: $black;
+
+  &:hover {
+    background: transparent;
+    border: 1px solid $resultButton;
+    color: $white;
+  }
+}

@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
+import ElectorListContainer from "../components/ElectorListContainer/ElectorListContainer";
+import Aux from "../hoc/aux/Aux";
 
-class EVM extends Component {
-
-
-    render() {
-        return (
-            <h1>EVM</h1>
-        )
-    }
+class EvmDemo extends Component {
+  render() {
+    return (
+      <Aux>
+        <ElectorListContainer />
+      </Aux>
+    );
+  }
 }
 
-
-export default EVM;
+export default EvmDemo;

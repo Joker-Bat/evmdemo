@@ -11,7 +11,7 @@ const data = [
   //
   {
     id: 0,
-    partyNameThamizh: "நாம் தமிழர் கட்சி",
+    partyName: "நாம் தமிழர் கட்சி",
     partyLeaderNameThamizh: "செந்தமிழன் சீமான்",
     partyLeaderNameEnglish: "Senthamizhan Seeman",
     partyShortName: "ntk",
@@ -20,7 +20,7 @@ const data = [
   },
   {
     id: 1,
-    partyNameThamizh: "மக்கள் நீதி மையம்",
+    partyName: "மக்கள் நீதி மய்யம்",
     partyLeaderNameThamizh: "கமல் ஹாசன்",
     partyLeaderNameEnglish: "	Kamal Haasan",
     partyShortName: "mnm",
@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 2,
-    partyNameThamizh: "அஇஅதிமுக",
+    partyName: "அஇஅதிமுக",
     partyLeaderNameThamizh: "எடப்பாடி க. பழனிசாமி",
     partyLeaderNameEnglish: "Edappadi K. Palaniswami",
     partyShortName: "admk",
@@ -38,7 +38,7 @@ const data = [
   },
   {
     id: 3,
-    partyNameThamizh: "திமுக",
+    partyName: "திமுக",
     partyLeaderNameThamizh: "மு.க.ஸ்டாலின்",
     partyLeaderNameEnglish: "	M. K. Stalin",
     partyShortName: "dmk",

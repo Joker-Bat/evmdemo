@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixin.scss";
+
+.VoteButton {
+  appearance: none;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  // border: 1px solid $black;
+  background-color: $voteButton;
+  box-shadow: inset 1px 1px 2px $white, inset -0.5px -0.5px 3px $black;
+  transition: box-shadow 0.05s ease-in, filter 0.05s ease;
+
+  &:hover {
+    filter: brightness(105%);
+  }
+
+  &:active {
+      outline: none;
+    box-shadow: none;
+    border: none;
+    transform: translateY(2px);
+  }
+
+  @include respond(laptop) {
+    width: 100px;
+    height: 50px;
+  }
+}
