@@ -1,7 +1,7 @@
-import "./App.css";
+import classes from "./App.module.scss";
 
 function App() {
-  return <h1>Testing</h1>;
+  return <h1 className={classes.App}>Testing</h1>;
 }
 
 export default App;
