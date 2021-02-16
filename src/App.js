@@ -1,7 +1,17 @@
 import classes from "./App.module.scss";
 
+
+import EVM from "./containers/EvmDemo";
+import Layout from "./hoc/layout/Layout";
+
 function App() {
-  return <h1 className={classes.App}>Testing</h1>;
+  return (
+    <div className={classes.App}>
+      <Layout>
+        <EVM />
+      </Layout>
+    </div>
+  );
 }
 
 export default App;

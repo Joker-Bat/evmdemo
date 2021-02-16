@@ -1,0 +1,14 @@
+@import "../../assets/styles/variables.scss";
+
+.Light {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $black;
+    background: radial-gradient($black 0%, $lightColor 13%, $lightColor 30%, $white 30.5%, $lightColor 31%);
+    filter: brightness(80%);
+
+    &:hover {
+        filter: brightness(200%);
+    }
+}
