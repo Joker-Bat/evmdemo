@@ -21,8 +21,8 @@ const Elector = (props) => {
         <Img png={props.png} webp={props.webp} class={classes.Logo} />
       </div>
       <div className={classes.VoteButtonContainer}>
-        <Light />
-        <VoteButton />
+        <Light link={props.partyShortName} />
+        <VoteButton link={props.partyShortName} />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const Header = (props) => {
     <div className={classes.Header}>
       <div className={classes.Ready}>
         <h1 className={classes.Title}>Ready</h1>
-        <Light />
+        <Light link="ready" />
       </div>
       <Img png={logoPng} webp={logoWebp} class={classes.Logo} />
     </div>

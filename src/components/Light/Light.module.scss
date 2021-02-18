@@ -13,4 +13,9 @@
     $lightColor 31%
   );
   filter: brightness(80%);
+  transition: filter 0.15s ease-out;
+}
+
+.Active {
+  filter: brightness(200%);
 }

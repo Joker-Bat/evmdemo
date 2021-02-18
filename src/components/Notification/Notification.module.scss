@@ -18,9 +18,10 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
-  
+  text-transform: capitalize;
+
   @include respond(laptop) {
-    width: 70%;
+    width: 60%;
   }
 }
 

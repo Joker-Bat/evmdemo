@@ -1,22 +1,44 @@
-import React from "react";
+import React, { useContext, memo } from "react";
 
 import classes from "./ResultPage.module.scss";
 import data from "../../data/data";
 import Img from "../Img/Img";
 import { GrClose } from "react-icons/gr";
 
+import AuthContext from "../../assets/state/AuthContext";
+
 const ResultPage = (props) => {
-    // Add Active class to toggle view
+  // Add Active class to toggle view
+
+  const Context = useContext(AuthContext);
+
+  const wonParty = Context.wonPartyDetails;
+
+  const styles = [classes.ResultPage];
+
+  if (Context.hasResult) {
+    styles.push(classes.Active);
+  }
+
+  // Won Elector party and Vote count
+  // const partyName = Context.wonPartyDetails.partyName;
+  const voteCount = Context.wonPartyDetails.voteCount;
 
   return (
-    <div className={classes.ResultPage}>
-      <GrClose />
-      <Img png={data[0].logoPng} webp={data[0].logoWebp} class={classes.Logo} />
+    <div className={styles.join(" ")}>
+      <div onClick={Context.result}>
+        <GrClose />
+      </div>
+      <Img
+        png={wonParty.partyLogo.png}
+        webp={wonParty.partyLogo.webp}
+        class={classes.Logo}
+      />
       <h3 lang="ta">2021 சட்டமன்ற தேர்தலில்</h3>
-      <h1 className={classes.PartyName}>{data[0].partyName}</h1>
+      <h1 className={classes.PartyName}>{wonParty.partyName}</h1>
       <h3 lang="ta">வெற்றி பெற்றது.</h3>
       <h2 lang="ta" className={classes.TotalVote}>
-        மொத்த வாக்குகள் : <span>10,000,000</span>
+        மொத்த வாக்குகள் : <span>{voteCount}</span>
       </h2>
       <p className={classes.Author}>
         Desingned and build with 💙 by Shanmugam M
@@ -25,4 +47,4 @@ const ResultPage = (props) => {
   );
 };
 
-export default ResultPage;
+export default memo(ResultPage);

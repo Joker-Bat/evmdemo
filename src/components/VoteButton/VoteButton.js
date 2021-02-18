@@ -1,12 +1,18 @@
-import React from 'react';
-
+import React, { useContext } from "react";
 
 import classes from "./VoteButton.module.scss";
+import AuthContext from "../../assets/state/AuthContext";
 
-const VoteButton = () => {
-    return (
-        <button className={classes.VoteButton}></button>
-    )
-}
+const VoteButton = (props) => {
+  const ContextAPI = useContext(AuthContext);
+  const voted = ContextAPI.clicked;
 
-export default VoteButton
+  return (
+    <button
+      className={classes.VoteButton}
+      onClick={() => voted(props.link)}
+    ></button>
+  );
+};
+
+export default VoteButton;

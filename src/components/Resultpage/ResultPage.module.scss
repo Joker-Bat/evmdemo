@@ -43,10 +43,18 @@
   }
 
   & .Logo {
-    width: 200px;
+    margin: 10rem 0 3rem 0;
+    width: 150px;
+
+    @include respond(tab) {
+      width: 200px;
+      margin: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   & .PartyName {
+    margin: 1rem 0;
     color: $resultButton;
   }
 

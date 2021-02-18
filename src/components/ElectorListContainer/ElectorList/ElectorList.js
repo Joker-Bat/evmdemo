@@ -16,6 +16,7 @@ const ElectorList = (props) => {
             partyName={elector.partyName}
             partyLeaderNameThamizh={elector.partyLeaderNameThamizh}
             partyLeaderNameEnglish={elector.partyLeaderNameEnglish}
+            partyShortName={elector.partyShortName}
             png={elector.logoPng}
             webp={elector.logoWebp}
           />
