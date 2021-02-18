@@ -40,8 +40,11 @@ const ResultPage = (props) => {
       <h2 lang="ta" className={classes.TotalVote}>
         மொத்த வாக்குகள் : <span>{voteCount}</span>
       </h2>
+      <p className={classes.Tips}>It takes only a second to give us result not 3 or 4 days 😒</p>
+      <p className={classes.Lead}>Oh i forget</p>
+      <p className={classes.Fraud}>we are in <span>digital india</span></p>
       <p className={classes.Author}>
-        Desingned and build with 💙 by Shanmugam M
+        Design and build with 💙 by Shanmugam M
       </p>
     </div>
   );

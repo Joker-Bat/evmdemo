@@ -15,7 +15,7 @@
   }
 
   &:not(:first-child) .Logo {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   .Party {
@@ -74,7 +74,7 @@
   .Logo {
     height: 60px;
     width: 60px;
-    transform: scale(1.2);
+    transform: scale(1.5);
 
     @include respond(tab) {
       width: 80px;

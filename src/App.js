@@ -43,13 +43,13 @@ class App extends Component {
   };
 
   componentDidMount() {
-    setTimeout(() => {
+    this.readyLightTrue = setTimeout(() => {
       this.setState({ isReadyLight: true });
     }, 1000);
-    setTimeout(() => {
+    this.readyLightFalse = setTimeout(() => {
       this.setState({ isReadyLight: false });
     }, 3000);
-    setTimeout(() => {
+    this.ready = setTimeout(() => {
       this.setState({ isReady: true });
     }, 3000);
   }
@@ -57,7 +57,7 @@ class App extends Component {
   shortMessage = (msg) => {
     this.setState({ shortMessage: msg });
 
-    setTimeout(() => {
+    this.shortMessageTimer = setTimeout(() => {
       this.setState({ shortMessage: "" });
     }, 2000);
   };
@@ -76,7 +76,7 @@ class App extends Component {
     if (this.state.isReady) {
       voteClicked[link] = true;
       voteCount[link] += 1;
-      this.shortMessage("Your vote is counted");
+      this.shortMessage("Your vote is added");
 
       this.setState((prevState) => {
         return {
@@ -85,11 +85,10 @@ class App extends Component {
           totalCount: prevState.totalCount + 1,
         };
       });
-      setTimeout(() => {
+      this.voteClickTimer = setTimeout(() => {
         voteClicked[link] = false;
         this.setState({ partyVoteClick: voteClicked });
       }, 1200);
-      // this.setState({ totalCount: this.getTotalVoteCount() });
     } else {
       this.shortMessage("Wait for EVM to Ready");
     }
@@ -144,6 +143,14 @@ class App extends Component {
     this.setState({ partyVoteCount: partyNames, totalCount: 0 });
     this.shortMessage("Vote count has been empty!");
   };
+
+  componentWillUnmount() {
+    clearTimeout(this.readyLightTrue);
+    clearTimeout(this.readyLightFalse);
+    clearTimeout(this.ready);
+    clearTimeout(this.shortMessageTimer);
+    clearTimeout(this.voteClickTimer);
+  }
 
   render() {
     // console.log(this.winnerElector());

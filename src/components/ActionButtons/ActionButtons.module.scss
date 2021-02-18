@@ -30,21 +30,23 @@
 }
 
 .ResetButton {
+  cursor: pointer;
   border: 1px solid $resetButton;
   background: transparent;
   color: $darkgray;
 
   &:hover {
-    border: 1px solid $black;
+    border: 1px solid $resetButton;
     background: $resetButton;
     color: $white;
   }
 }
 
 .ResultButton {
-  border: 1px solid transparent;
+  cursor: pointer;
+  border: 1px solid $resultButton;
   background: $resultButton;
-  color: $black;
+  color: $white;
 
   &:hover {
     background: transparent;
